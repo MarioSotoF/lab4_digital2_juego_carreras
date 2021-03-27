@@ -36,6 +36,7 @@ volatile byte state = LOW;
 void setup() {
   pinMode(ledPin_R, OUTPUT);
   pinMode(ledPin_G, OUTPUT);
+  pinMode(ledPin_B, OUTPUT);
 
   pinMode(led1j1, OUTPUT);
   pinMode(led2j1, OUTPUT);
@@ -176,6 +177,9 @@ void player_1() {
       digitalWrite(led7j2, LOW);
       digitalWrite(led8j2, LOW);
       digitalWrite(ledPin_B, LOW);
+      digitalWrite(ledPin_G, HIGH);
+      delay(3000);
+      digitalWrite(ledPin_G, LOW);
       }
     }
 }
@@ -285,9 +289,13 @@ void player_2() {
       digitalWrite(led7j2, LOW);
       digitalWrite(led8j2, LOW);
       digitalWrite(ledPin_B, LOW);
+      digitalWrite(ledPin_R, HIGH);
+      delay(3000);
+      digitalWrite(ledPin_R, LOW);
       }
     }
 }
+//
 //
 void semaforo() {
   //Se enciende el led rojo
